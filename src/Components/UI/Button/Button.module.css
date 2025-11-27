@@ -1,0 +1,27 @@
+.container {
+    width: 350px;
+    height: 80px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    background: var(--bg1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px 12px 0 0;
+    border: 1px solid var(--text1);
+    cursor: pointer;
+
+    transition: all 0.5s ease;
+}
+
+.container:hover {
+    box-shadow: 0 0 10px 2px var(--shadow);
+    background-color: var(--text2);
+    transition: all 0.5s ease;
+}
+
+@media (max-width: 480px) {
+    .navButton {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}

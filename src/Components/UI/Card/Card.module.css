@@ -1,0 +1,67 @@
+.container {
+    flex: 1 1 clamp();
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    z-index: 0;
+    background: var(--bg1);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border);
+    box-shadow: 0 0 20px var(--shadow);
+    backdrop-filter: blur(20px);
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    /* половина ширины */
+    height: 0px;
+    /* толщина бордера */
+
+    box-shadow: 0 0 5px 1px var(--text3);
+
+    /* цвет */
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    /* толщина бордера */
+    height: 50%;
+    /* половина высоты */
+
+    box-shadow: 0 0 5px 1px var(--text3);
+}
+
+.title {
+    width: 90%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    color: var(--text1);
+
+    h4 {
+        text-decoration: wavy;
+        margin: 0px;
+    }
+}
+
+.description {
+    height: fit-content;
+    margin: 0;
+    padding: 20px 24px;
+    font-size: 18px;
+    line-height: 1.55;
+    color: var(--text3);
+}

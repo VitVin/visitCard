@@ -1,0 +1,41 @@
+.widget {
+    width: 700;
+    padding: 16px 20px;
+    background: var(--bg1);
+    border: 1px solid var(--border);
+    box-shadow: 0 0 3px 2px var(--shadow);
+    backdrop-filter: blur(6px);
+    border-radius: 5px 0 0 5px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.value {
+    margin: 1px;
+    color: var(--text1);
+
+    font-size: 12px;
+    font-family: Consolas, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: cursor-blink 1.5s infinite;
+}
+
+@keyframes cursor-blink {
+    0% {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: white;
+    }
+
+    100% {
+        border-color: transparent;
+    }
+}

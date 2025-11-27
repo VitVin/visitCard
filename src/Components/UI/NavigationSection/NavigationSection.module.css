@@ -1,0 +1,26 @@
+.navigationSection {
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    z-index: 3;
+}
+
+/* ======== Адаптив под планшеты и телефоны ======== */
+@media (max-width: 860px) {
+    .navigationSection {
+        gap: 15px;
+        bottom: 10px;
+    }
+}
+
+/* ======== Маленькие телефоны ======== */
+@media (max-width: 480px) {
+    .navigationSection {
+        gap: 8px;
+        bottom: 8px;
+        padding: 4px 0;
+    }
+}

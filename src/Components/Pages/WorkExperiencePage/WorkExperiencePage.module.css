@@ -1,0 +1,166 @@
+.page {
+    width: 100%;
+    padding: 10px 5%;
+}
+
+
+
+/* Горизонтальная лента */
+.timelineWrapper {
+    overflow-x: auto;
+    padding-bottom: 40px;
+}
+
+.timeline {
+    display: flex;
+    gap: 140px;
+    position: relative;
+    padding: 30px 10px;
+}
+
+
+.line {
+    position: relative;
+    top: 60px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right,
+            var(--border),
+            var(--text1),
+            var(--border));
+    box-shadow: 0 0 15px var(--shadow);
+    transform-origin: left center;
+}
+
+
+
+
+
+/* Элемент */
+.entry {
+    position: relative;
+    min-width: 300px;
+}
+
+/* Точка */
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--text1);
+    box-shadow: 0 0 10px var(--text1), 0 0 20px var(--shadow);
+    margin: 0 auto;
+    position: relative;
+    top: 53px;
+}
+
+/* Карточка */
+.card {
+    margin-top: 90px;
+    padding: 25px;
+    background: var(--bg1);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 20px var(--shadow);
+    text-align: center;
+}
+
+.year {
+    color: var(--text3);
+    margin-bottom: 6px;
+}
+
+.heading {
+    color: var(--text1);
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.company {
+    color: var(--text2);
+    margin-bottom: 12px;
+}
+
+.desc {
+    color: var(--text3);
+    line-height: 1.6;
+}
+
+/* Адаптив */
+/* ======== 860px — переходим на вертикальный layout ======== */
+@media (max-width: 860px) {
+
+    /* Вертикальная лента */
+    .timelineWrapper {
+        overflow-x: visible;
+        padding-bottom: 0;
+    }
+
+    .timeline {
+        flex-direction: column;
+        gap: 80px;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    /* Вертикальная линия */
+    .line {
+        display: none;
+
+    }
+
+    /* Точка слева */
+    .dot {
+        position: absolute;
+        left: 8px;
+        top: 0;
+        margin: 0;
+    }
+
+    /* Карточка справа от линии */
+    .card {
+        margin-left: 40px;
+        margin-top: 0;
+        width: calc(100% - 60px);
+        text-align: left;
+    }
+
+    .entry {
+        min-width: unset;
+        padding-top: 25px;
+        position: relative;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+}
+
+
+/* ======== 480px — адаптация под телефоны ======== */
+@media (max-width: 480px) {
+
+    .card {
+        padding: 18px;
+    }
+
+    .heading {
+        font-size: 18px;
+    }
+
+    .desc {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .timeline {
+        gap: 60px;
+    }
+
+}

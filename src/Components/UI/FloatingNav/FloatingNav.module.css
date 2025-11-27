@@ -1,0 +1,54 @@
+.menuButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 45px;
+    height: 45px;
+    background: var(--bg1);
+    border: 1px solid var(--text1);
+    color: var(--text1);
+    border-radius: 6px;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+/* Дроувер */
+.drawer {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 220px;
+    height: 100vh;
+    background: var(--bg1);
+    border-right: 1px solid var(--text2);
+    backdrop-filter: blur(20px);
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: left 0.35s ease;
+    z-index: 9998;
+}
+
+.open {
+    left: 0;
+}
+
+/* Пункты меню */
+.item {
+    background: transparent;
+    border: none;
+    color: var(--text1);
+    text-align: left;
+    padding: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border);
+}
+
+.item.active {
+    color: var(--accent, var(--text1));
+    font-weight: 600;
+}
