@@ -1,25 +1,16 @@
 import { AnimatePresence, delay, motion, useScroll, useTransform } from 'framer-motion'
-import { Canvas, useThree } from '@react-three/fiber';
 import { PageSection } from './Components/UI/PageSection/PageSection';
-import { GizmoHelper, GizmoViewport, Html, OrbitControls, PerspectiveCamera, Stars } from '@react-three/drei';
 import './App.css';
 import { use, useEffect, useState, useRef } from 'react';
-import { ParallaxCover } from './Components/UI/ParallaxCover/ParallaxCover';
-import { Model } from './Components/UI/Model/Model';
 import { Card } from './Components/UI/Card/Card';
 import { Widget } from './Components/UI/Widget/Widget';
 import { a, label, picture } from 'framer-motion/client';
 import { NavigationButton } from './Components/UI/Button/Button';
 import { NavigationSection } from './Components/UI/NavigationSection/NavigationSection';
-import SmartCanvas from './Components/3DComponents/SmartCanvas/SmartCanvas';
-import CameraDebugger from './Components/3DComponents/CameraDebugger/CameraDebugger';
 import SkillsPage from './Components/Pages/SkillsPage/SkillsPage';
-import { RobotMover } from './Components/3DComponents/3DComponentsMover/3DComponentsMover';
-import ExperienceCard3D from './Components/3DComponents/Experience3DCard/Experience3DCard';
 import ExperienceSection from './Components/Pages/WorkExperiencePage/WorkExperiencePage';
 import ContactsPage from './Components/Pages/ContactsPage/ContactsPage';
 import { WelcomePage } from './Components/Pages/WelcomePage/WelcomePage';
-import { AnimatedDiv } from './Components/UI/AnimatedDiv/AnimatedDev';
 import EducationPage from './Components/Pages/EducationPage/EducationPage';
 import WorkExperiencePage from './Components/Pages/WorkExperiencePage/WorkExperiencePage';
 import robotImage from './assets/robot.png';

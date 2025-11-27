@@ -1,4 +1,3 @@
-import gsap from "gsap";
 import { Card } from "../../UI/Card/Card"
 import classes from './WelcomePage.module.css'
 import { motion } from "framer-motion";
