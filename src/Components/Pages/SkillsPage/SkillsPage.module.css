@@ -32,7 +32,7 @@
 }
 
 .heading {
-    font-size: 24px;
+    font-size: clamp(18px, 2.5vw, 24px);
     margin-bottom: 20px;
     color: var(--text1);
 }
@@ -47,7 +47,7 @@
 
 .item {
     padding: 6px 0;
-    font-size: 17px;
+    font-size: clamp(16px, 2vw, 20px);
     color: var(--text3);
     text-decoration: none;
     transition: all 0.25s ease;
@@ -68,11 +68,6 @@
     .list {
 
         gap: 10px;
-    }
-
-    .item {
-
-        font-size: 16px;
     }
 }
 

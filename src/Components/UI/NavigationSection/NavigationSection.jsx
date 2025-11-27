@@ -27,9 +27,7 @@ export const NavigationSection = ({ isPageActive, scrollToSection, pages, curren
                 {
                     pages.map((item, index) => (
                         <NavigationButton key={index} isActive={currentPage === index && isPageActive} text={item} onClick={() => {
-                            if (index === 6) {
-                                index = 7
-                            } scrollToSection(index)
+                            scrollToSection(index)
                         }} />
                     ))
                 }

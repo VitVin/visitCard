@@ -97,7 +97,7 @@ This web application provides a convenient way to track
         </PageSection>
 
 
-        <PageSection id="section-6" setCurrentSection={setSection} sectionNumber={7} isActive={isPageActive} setIsPageActive={setIsPageActive}>
+        <PageSection id="section-6" setCurrentSection={setSection} sectionNumber={6} isActive={isPageActive} setIsPageActive={setIsPageActive}>
           <ContactsPage />
         </PageSection>
 

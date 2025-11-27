@@ -27,7 +27,7 @@ export const ProjectsPage = ({ projectData }) => {
                     style={{ display: 'flex', flexDirection: 'column', gap: '10px', margin: '10px' }}
                     onAnimationComplete={() => setMainCardDone(true)}
                 >
-                    <Card styles={{ width: '100%', maxWidth: '700px', height: 'auto', textAlign: 'justify' }}
+                    <Card styles={{ width: 'clamp(300px, 100%, 600px)', height: 'auto', textAlign: 'justify' }}
                         title={projectData?.name}
                         description={projectData?.description} link={projectData?.link} />
 
@@ -43,7 +43,7 @@ export const ProjectsPage = ({ projectData }) => {
 
                                     <Card styles={{
 
-                                        width: '200px', height: '70px', fontSize: '30px',
+                                        width: 'clamp(100px, 100%, 200px)', height: 'auto', fontSize: '30px',
                                     }} description={item} />
 
                                 </motion.div>

@@ -64,15 +64,10 @@ export function Widget({ data, currentPage }) {
             </motion.div >
 
             <motion.img
+                className={styles.picture}
                 src={data[currentData]?.picture}
 
-                style={{
-                    width: "550px",
-                    position: "fixed", // картинка остаётся в потоке
-                    bottom: 10,
-                    right: 0,
 
-                }}
                 initial={{ opacity: 0, x: 50 }}
                 animate={
                     shouldAnimateClose
