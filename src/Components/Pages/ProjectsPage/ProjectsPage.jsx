@@ -27,7 +27,7 @@ export const ProjectsPage = ({ projectData }) => {
                     style={{ display: 'flex', flexDirection: 'column', gap: '10px', margin: '10px' }}
                     onAnimationComplete={() => setMainCardDone(true)}
                 >
-                    <Card styles={{ width: 'clamp(300px, 100%, 600px)', height: 'auto', textAlign: 'justify' }}
+                    <Card styles={{ width: 'clamp(300px, 100%, 600px)', height: '70%', textAlign: 'justify' }}
                         title={projectData?.name}
                         description={projectData?.description} link={projectData?.link} />
 
@@ -43,14 +43,14 @@ export const ProjectsPage = ({ projectData }) => {
 
                                     <Card styles={{
 
-                                        width: 'clamp(100px, 100%, 200px)', height: 'auto', fontSize: '30px',
+                                        width: 'clamp(10px, 100%, 200px)', height: 'auto', fontSize: '30px',
                                     }} description={item} />
 
                                 </motion.div>
                             )
                         })}
-                        {projectData?.link && <a style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href={projectData.link}>
-                            <Card styles={{ minWidth: '200px', width: '100%', height: '70px', fontSize: '30px', border: '1px solid var(--text1)', color: 'var(--text1)', cursor: 'pointer', }} description={'Visit site'} /></a>
+                        {projectData?.link && <a style={{ marginLeft: '10px', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer" href={projectData.link}>
+                            <Card styles={{ minWidth: '200px', width: '100%', height: 'auto', fontSize: '30px', border: '1px solid var(--text1)', color: 'var(--text1)', cursor: 'pointer', }} description={'Visit site'} /></a>
 
                         }
                     </div>
