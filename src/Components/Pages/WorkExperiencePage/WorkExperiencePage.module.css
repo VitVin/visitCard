@@ -1,5 +1,5 @@
 .page {
-    width: 100%;
+    width: 100vw;
     padding: 10px 5%;
 }
 
@@ -152,7 +152,5 @@
     .card {
         margin: 5px;
     }
-
-
 
 }
