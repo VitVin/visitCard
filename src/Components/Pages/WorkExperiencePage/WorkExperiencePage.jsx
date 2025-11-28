@@ -38,8 +38,8 @@ export default function WorkExperiencePage() {
                 {/* АНИМИРУЕМАЯ ЛИНИЯ */}
                 <motion.div
                     className={styles.line}
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1, }}
+                    initial={{ maxWidth: 0 }}
+                    whileInView={{ maxWidth: '100%' }}
                     viewport={{ amount: 0.7, once: false }}
                     transition={{ duration: 1.2, ease: "easeInOut", }}
                     onAnimationComplete={() => setLineDone(true)}
