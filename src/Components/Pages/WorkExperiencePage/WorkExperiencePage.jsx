@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import styles from "./WorkExperiencePage.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function WorkExperiencePage() {
     const [lineDone, setLineDone] = useState(false);
+    const isMobile = useMediaQuery({ maxWidth: 860 });
+
+
+    useEffect(() => {
+        if (isMobile) { setLineDone(true) };
+    }, []);
 
     const jobs = [
         {

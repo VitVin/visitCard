@@ -94,7 +94,6 @@
 
     /* Вертикальная лента */
     .timelineWrapper {
-        overflow-x: visible;
         padding-bottom: 0;
     }
 
