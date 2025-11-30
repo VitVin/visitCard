@@ -17,16 +17,10 @@ import robotImage from './assets/robot.png';
 import ThemeSwitcher from './Components/UI/ThemeSwitcher/ThemeSwitcher';
 import CoursesPage from './Components/Pages/Courses/CoursesPage';
 import { ProjectsPage } from './Components/Pages/ProjectsPage/ProjectsPage';
-import pocketStorageImage from './assets/PocketStorage.png';
-import mmotodayImage from './assets/MMOTodayPicture.png';
+
 
 export default function App() {
-
-  const [mouse, setMouse] = useState({ x: 0, y: 0 });
-
   const [isPageActive, setIsPageActive] = useState(true);
-
-  const { scrollY } = useScroll();
 
   const [section, setSection] = useState(0);
 
@@ -45,8 +39,6 @@ export default function App() {
       <motion.div className="App" onMouseMove={(e) => setMouse({ x: e.clientX - window.innerWidth / 2, y: e.clientY - window.innerHeight / 2 })}
         animate={{ top: section * window.innerHeight }}
       >
-
-
 
         <PageSection id="section-0" setCurrentSection={setSection} title={'WELCOME'} sectionNumber={0} isActive={isPageActive} setIsPageActive={setIsPageActive} >
 
@@ -72,28 +64,10 @@ export default function App() {
         </PageSection>
 
         <PageSection id="section-5" setCurrentSection={setSection} title={'PET-PROJECTS'} sectionNumber={5} isActive={isPageActive} setIsPageActive={setIsPageActive}>
-          <ProjectsPage projectData={{
-            name: 'POCKETSTORAGE', description: `This mobile application allows you to organize a complex storage structure, whether it's boxes in a closet or an entire warehouse, and carry out convenient search and navigation through the structure. 
- The application features search functionality by item name or storage location, automatically indicates the location of the item you are looking for, as well as its quantity, name, and description. 
- It also allows you to manage storage objects (move, delete, edit). The fast speed of the application and its portability enable you to quickly and conveniently organize your storage structure and find the necessary items.
- The application supports 9 languages and offers customization options to adjust the appearance according to user preferences.
- In addition, it provides the ability to save and transfer your storage data to another device.`,
-            stack: ['React Native', 'MobX'], picture: pocketStorageImage
-          }} />
+          <ProjectsPage />
 
-        </PageSection>
-        <PageSection setCurrentSection={setSection} sectionNumber={5} isActive={isPageActive} setIsPageActive={setIsPageActive}>
-          <ProjectsPage projectData={{
-            name: 'MMOTODAY', description: `
-This is my first pet project built with React, and it still feels pretty cool to me.
-This web application provides a convenient way to track
-             and search online games using filters (genre, graphics, category, etc.) and search by name.
-              Users can also access descriptions of the games, system requirements, trailers (if available),
-               and links to the official websites of the games. The application is integrated with the backend and
-                provides access to more than 390 games. Its responsive design allows the application to be used on a 
-                computer, mobile phone, or tablet.`, link: 'https://vitvin.github.io/MMOToday/',
-            stack: ['React'], picture: mmotodayImage
-          }} />
+
+
         </PageSection>
 
 
